@@ -5,51 +5,21 @@
 function changePlaceholder() {
     // search bar responsive
     if( $(window).width() <= 1352){
-        $('.navbar_search').attr('placeholder','Search');
+        $('.search_bar input').attr('placeholder','Search');
     } else {
-        $('.navbar_search').attr('placeholder','Search by Companies, Categories, and News');
-    }}
+        $('.search_bar input').attr('placeholder','Search by Companies, Categories, and News');
+    }
+}
 
 $(window).resize( changePlaceholder ).trigger('resize');
 
 
 $(document).ready(function(){
-    $(".btn_follow_on_blue_bg").on("click", function(){
-        var data_key = $(this).attr("data-key");
-        if (data_key == 1) {
-            $(this).attr("data-key", 2);
-            $(this).removeClass("btn_follow_on_blue_bg_active");
-            $(this).text("Follow");
-        }else{
-            $(this).attr("data-key", 1);
-            $(this).addClass("btn_follow_on_blue_bg_active");
-            $(this).text("Following");
-        }
-    });
-    $(".btn_follow_on_white_bg").on("click", function(){
-        var data_key = $(this).attr("data-key");
-        if (data_key == 1) {
-            $(this).attr("data-key", 2);
-            $(this).removeClass("btn_follow_on_white_bg_active");
-            $(this).text("Follow");
-        }else{
-            $(this).attr("data-key", 1);
-            $(this).addClass("btn_follow_on_white_bg_active");
-            $(this).text("Following");
-        }
-    });
-
-    $(".subnav_btn_follow").on("click", function(){
-        var data_key = $(this).attr("data-key");
-        if (data_key == 1) {
-            $(this).attr("data-key", 2);
-            $(this).removeClass("subnav_btn_follow_active");
-            $(this).text("FOLLOW");
-        }else{
-            $(this).attr("data-key", 1);
-            $(this).addClass("subnav_btn_follow_active");
-            $(this).text("FOLLOWING");
-        }
+    $(".select_category").on("click", function(){
+        $(".menu_categories").toggle();
+        $(".menu_categories_contents").toggle();
+        $(".caret_category").toggle();
+        $(".close_category").toggle();
     });
 });
 
