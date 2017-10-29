@@ -26,12 +26,20 @@ $(document).ready(function(){
         event.stopPropagation();
     });
 
-
+    // Toggling Mobile Menu
     $(".nav-trigger").on("click", function () {
         $(".mobile_menu").toggle();
         if ($(".mobile_menu").is(":visible"))
             $('body').addClass('overflow_hidden');
         else
             $('body').removeClass('overflow_hidden');
+    });
+
+    //
+    $(".mobile_menu>ul>li").on("click", function () {
+        $(".mobile_menu>ul>li").removeClass("active_menu");
+        $(this).addClass("active_menu");
+        $(".mobile_menu>ul>li i").removeClass('rotated');
+        $(this).find("i").addClass('rotated');
     });
 });

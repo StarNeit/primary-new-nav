@@ -392,6 +392,18 @@ body{
 .overflow_hidden{
 	overflow: hidden;
 }
+.rotated {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.mobile_menu .active_menu{
+	background: #20235e;
+}
+
+
 @media (max-width: 1150px){
 	.logo1{
 		display: block !important;
