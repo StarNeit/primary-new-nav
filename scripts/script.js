@@ -15,12 +15,7 @@ $(window).resize( changePlaceholder ).trigger('resize');
 
 
 $(document).ready(function(){
-    $(".select_category").on("click", function(){
-        $(".menu_categories").toggle();
-        $(".menu_categories_contents").toggle();
-        $(".caret_category").toggle();
-        $(".close_category").toggle();
-    });
+
 });
 
 var lastScrollTop = 0;

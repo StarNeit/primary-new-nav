@@ -157,6 +157,8 @@ body{
 	line-height: 16px;
 	padding-right:50px;
 }
+.search_bar > input:focus::-webkit-input-placeholder { color:transparent; }
+.search_bar > input:focus:-moz-placeholder { color:transparent; }
 
 .menu_categories {
 	height: 509.03px;
@@ -247,6 +249,92 @@ body{
 
 	margin-top: 9px;
 	cursor: pointer;
+}
+.menu_categories_contents ul li:hover{
+	color: #6170ff;
+}
+
+.nav_menu{
+	position: relative;
+}
+.nav_menu:hover a{
+	text-decoration: none;
+	color: #414042 !important;
+	font-weight: bold;
+	text-align: center;
+}
+.nav_menu>ul{
+	position: absolute;
+	top: 48px;
+	left: -35px;
+	padding: 0;
+	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.15);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	display: none;
+}
+.nav_menu>ul li{
+	height: 80px;
+	border: 1px solid #F5F5F5;
+	background-color: #FFFFFF;
+
+	color: #414042;
+	font-family: "ProximaNovaSemibold";
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 18px;
+
+	cursor: pointer;
+	text-align: center;
+	padding-top: 30px;
+	margin: 0 !important;
+}
+.nav_menu>.menu_tech_companies li{
+	width: 182px;
+}
+.nav_menu>.menu_marketers li{
+	width: 160px;
+}
+.nav_menu>.menu_about li{
+	width: 128px;
+}
+.nav_menu>.menu_login li{
+	width: 147px;
+}
+
+.nav_menu>ul li:hover{
+	background-color: #F5F5F5;
+}
+.nav_menu>ul li.last{
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.menu_categories_contents .trending_box{
+	background: rgba(223, 226, 255, 0.25);
+	margin: 30px 20px 30px 30px;
+	padding: 19px 19px 23px 19px;
+
+	display: flex;
+}
+
+.menu_categories_contents .trending_box>div{
+	margin-left: 8px;
+}
+
+.menu_categories_contents .trending_box h1{
+	color: #3A4399;
+	font-family: "ProximaNovaRegular";
+	font-size: 12px;
+	font-weight: 500;
+	margin: 0;
+}
+
+.menu_categories_contents .trending_box h2 {
+	color: #6170FF;
+	font-family: "ProximaNovaRegular";
+	font-size: 12px;
+	margin: 2px 0 0;
 }
 
 .caret_category{
