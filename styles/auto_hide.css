@@ -85,13 +85,16 @@ a {
   /* vertically align its content */
   display: table;
   height: 100%;
-  padding: 0 1em;
+  padding: 0 2em;
+  padding-top: 7px;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #25283D;
   font-weight: bold;
   right: 0;
   border-left: 1px solid #f2f2f2;
+
+  background: rgba(58, 66, 153, 1);
 }
 .cd-auto-hide-header .nav-trigger span {
   /* vertically align inside parent element */
@@ -104,7 +107,7 @@ a {
   position: relative;
   height: 2px;
   width: 22px;
-  background-color: #25283D;
+  background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -234,7 +237,7 @@ a {
   	show primary nav - mobile only 
   	:target is used to show navigation on no-js devices
   */
-  display: block;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   .nav-open .cd-primary-nav ul,

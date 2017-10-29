@@ -25,4 +25,13 @@ $(document).ready(function(){
     $('.nav_menu, .avatar, .select_category').click(function(event){
         event.stopPropagation();
     });
+
+
+    $(".nav-trigger").on("click", function () {
+        $(".mobile_menu").toggle();
+        if ($(".mobile_menu").is(":visible"))
+            $('body').addClass('overflow_hidden');
+        else
+            $('body').removeClass('overflow_hidden');
+    });
 });

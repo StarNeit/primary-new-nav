@@ -173,11 +173,11 @@ body{
 
 	display: none;
 }
-.menu_categories ul{
+.menu_categories>ul{
 	margin-top: 20px;
 	padding-left: 0;
 }
-.menu_categories ul li {
+.menu_categories>ul>li {
 	color: rgba(255, 255, 255, 0.75);
 	font-family: "ProximaNovaRegular";
 	font-size: 14px;
@@ -189,7 +189,7 @@ body{
 
 	position: relative;
 }
-.arrow-right {
+.menu_categories .arrow-right {
 	width: 0;
 	height: 0;
 	border-top: 10px solid transparent;
@@ -201,24 +201,25 @@ body{
 	top: 7px;
 
 	display: none;
+	z-index: 200;
 }
 
-.menu_categories ul li:hover {
+.menu_categories>ul>li:hover {
 	background-color: rgba(0, 0, 0, 0.25);
 	color: #FFFFFF;
 	font-family: "ProximaNovaBold";
 	font-weight: bold;
 	cursor: pointer	;
 }
-.menu_categories ul li i{
+.menu_categories>ul>li i{
 	float: right;
 	margin-right: 26px;
 	margin-top: 8px;
 }
-.menu_categories ul li:hover .arrow-right{
+.menu_categories>ul>li:hover .arrow-right{
 	display: block;
 }
-.menu_categories ul li:hover i{
+.menu_categories>ul>li:hover i{
 	display: none;
 }
 
@@ -226,8 +227,8 @@ body{
 	position: absolute;
 	left: 0;
 	top: 80px;
-	max-width: 540px;
-	width: 100%;
+	width: 540px;
+	/*width: 100%;*/
 	background: #fff;
 	height: 509.03px;
 	border-top: 2px solid #f7f7f7;
@@ -235,7 +236,7 @@ body{
 	display: none;
 }
 
-.menu_categories_contents ul {
+.menu_categories_contents>ul {
 	list-style-type: none;
 	margin-top: 20px;
 	/*width: 210px;*/
@@ -244,13 +245,14 @@ body{
 	font-size: 14px;
 	line-height: 16px;
 }
-.menu_categories_contents ul li{
+.menu_categories_contents>ul>li{
 	line-height: 32px;
 
 	margin-top: 9px;
 	cursor: pointer;
+	font-weight: normal;
 }
-.menu_categories_contents ul li:hover{
+.menu_categories_contents>ul>li:hover{
 	color: #6170ff;
 }
 
@@ -289,15 +291,19 @@ body{
 	padding-top: 30px;
 	margin: 0 !important;
 }
+
 .nav_menu>.menu_tech_companies li{
 	width: 182px;
 }
+
 .nav_menu>.menu_marketers li{
 	width: 160px;
 }
+
 .nav_menu>.menu_about li{
 	width: 128px;
 }
+
 .nav_menu>.menu_login li{
 	width: 147px;
 }
@@ -347,6 +353,45 @@ body{
 	margin-top: -3px;
 }
 
+
+/*Mobile Nav*/
+.mobile_menu {
+	width: 100%;
+	height: calc(100% - 80px);
+	position: fixed;
+	top: 80px;
+	background: rgba(58, 66, 153, 1);
+	overflow: auto;
+
+	display: none;
+	z-index: 301;
+}
+.mobile_menu>ul{
+	padding-left: 0;
+}
+.mobile_menu>ul>li{
+	width: 100%;
+	border-bottom: 1px solid rgba(137, 199, 255, 0.25);
+
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 600;
+	color: #fff;
+
+	list-style-type: none;
+	padding-left: 25px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	cursor: pointer;
+}
+.mobile_menu>ul>li i{
+	font-size: 22px;
+	margin-right: 9px;
+	color: rgba(160, 168, 255, 1);
+}
+.overflow_hidden{
+	overflow: hidden;
+}
 @media (max-width: 1150px){
 	.logo1{
 		display: block !important;
@@ -377,6 +422,9 @@ body{
 	}
 	.search_bar > img{
 		right: 40px;
+	}
+	.mobile_menu{
+		display: block;
 	}
 }
 
