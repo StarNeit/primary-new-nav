@@ -423,9 +423,6 @@ body{
 	.search_bar > img{
 		right: 40px;
 	}
-	.mobile_menu{
-		display: block;
-	}
 }
 
 @media (max-width: 768px) {
