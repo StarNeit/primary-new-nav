@@ -402,6 +402,20 @@ body{
 .mobile_menu .active_menu{
 	background: #20235e;
 }
+.mobile_menu>ul>li>ul{
+	display: none;
+	list-style-type: none;
+	border-top: 1px solid rgba(137, 199, 255, 0.25);
+	margin-top: 24px;
+	margin-left: -25px;
+}
+.mobile_menu>ul>li>ul>li{
+	padding-top: 20px;
+	font-weight: 400;
+}
+.mobile_menu>ul>li>ul>li:hover{
+	font-weight: bold;
+}
 
 
 @media (max-width: 1150px){
